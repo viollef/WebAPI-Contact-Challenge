@@ -77,4 +77,4 @@ Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
 
 [Fabien Viollet](https://www.linkedin.com/in/fabien-viollet-297832b6/) - fabien.violletc@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/viollef/WebAPI-Contact-Challenge)
+Project Link: [https://github.com/viollef/WebAPI-Contact-Challenge](https://github.com/viollef/WebAPI-Contact-Challenge)
