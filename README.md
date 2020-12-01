@@ -27,7 +27,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
 
 ### Built With
 
@@ -53,20 +53,23 @@
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln
-2. Launch ContactsAPI project with profile : Debug / IIS Express
+1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln</br>
+2. Launch ContactsAPI project with profile : Debug / IIS Express</br>
 3. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
 *https://localhost:44386/contactsapi/contact
-*https://localhost:44386/contactsapi/skill
+*https://localhost:44386/contactsapi/skill </br>
 
 <!-- OTHER INFORMATION -->
 ## Other Info
-1. Database:
-	*The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user>
-	*Migration generated with Package Manager Console: >PCM: add-migration
-2. Object-relational mapper: 
-	*[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/)
-	*LazyLoading disable, mostly managed with eager loading
+1. Database: </br>
+	-The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user> </br>
+	-Migration generated with Package Manager Console: "add-migration" </br>
+	-Diagram: </br>
+	<img src="images/dbDiagram.jpg" alt="dbDiagram" width="417" height="243"> </br>
+	
+2. Object-relational mapper: </br>
+	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/) </br>
+	-LazyLoading disable, mostly managed with eager loading </br>
 	
 
 <!-- CONTACT -->
