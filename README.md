@@ -1,6 +1,4 @@
-<br />
-
-  <h3 align="center">WebAPI-Contact-Challenge</h3>
+<h3 align="center">WebAPI-Contact-Challenge</h3>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -20,6 +18,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#other-info">Other information</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -40,9 +39,9 @@
 ## Getting Started
 
 ### Prerequisites
-1. Install 1
-2. Install 2
-3. Install 3
+1. [Visual Studio 2019](https://visualstudio.microsoft.com/fr/downloads/)
+2. [.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0)
+3. [SQL Server LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15)
 
 
 ### Installation
@@ -51,12 +50,22 @@
    ```sh
    git clone https://github.com/viollef/WebAPI-Contact-Challenge.git
    ```
-2. Open
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Exemple
+1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln
+2. Launch ContactsAPI project with profile : Debug / IIS Express
+3. You can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoint: https://localhost:44386/contactsapi/contact
+
+<!-- OTHER INFORMATION -->
+## Other Info
+1. Database:
+	-The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user>
+	-Migration generated with Package Manager Console: >PCM: add-migration
+2. Object-relational mapper: 
+	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/)
+	-LazyLoading disable, mostly managed with eager loading
+	
 
 <!-- CONTACT -->
 ## Contact
