@@ -10,10 +10,12 @@ namespace ContactsAPI.Models
         }
 
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Skill> Skills { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contact>().ToTable("Contact");
+            modelBuilder.Entity<Skill>().ToTable("Skill");
         }
     }
 }

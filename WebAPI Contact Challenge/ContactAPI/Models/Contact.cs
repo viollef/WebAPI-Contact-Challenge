@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ContactsAPI.Models
 {
@@ -30,5 +31,8 @@ namespace ContactsAPI.Models
         [Phone]
         [Required]
         public string MobilePhoneNumber { get; set; }
+
+        //Navigation Propertie
+        public ICollection<Skill> Skills { get; set; }
     }
 }

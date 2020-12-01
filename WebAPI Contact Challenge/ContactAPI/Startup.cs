@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
 namespace ContactAPI
 {
@@ -26,7 +27,11 @@ namespace ContactAPI
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Contacts API", Version = "v1" });

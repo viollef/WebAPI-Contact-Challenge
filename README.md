@@ -31,7 +31,7 @@
 
 ### Built With
 
-* [ASP.NET Core 5.0](https://docs.microsoft.com/fr-fr/dotnet/core/dotnet-five)
+[ASP.NET Core 5.0](https://docs.microsoft.com/fr-fr/dotnet/core/dotnet-five)
 
 
 
@@ -55,16 +55,18 @@
 ## Usage
 1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln
 2. Launch ContactsAPI project with profile : Debug / IIS Express
-3. You can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoint: https://localhost:44386/contactsapi/contact
+3. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
+*https://localhost:44386/contactsapi/contact
+*https://localhost:44386/contactsapi/skill
 
 <!-- OTHER INFORMATION -->
 ## Other Info
 1. Database:
-	-The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user>
-	-Migration generated with Package Manager Console: >PCM: add-migration
+	*The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user>
+	*Migration generated with Package Manager Console: >PCM: add-migration
 2. Object-relational mapper: 
-	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/)
-	-LazyLoading disable, mostly managed with eager loading
+	*[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/)
+	*LazyLoading disable, mostly managed with eager loading
 	
 
 <!-- CONTACT -->
