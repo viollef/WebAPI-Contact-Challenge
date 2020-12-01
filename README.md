@@ -65,7 +65,7 @@ Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
 	-The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user> </br>
 	-Migration generated with Package Manager Console: "add-migration" </br>
 	-Diagram: </br>
-	<img src="images/dbDiagram.jpg" alt="dbDiagram" width="417" height="243"> </br>
+	<img src="Images/dbDiagram.jpg" alt="dbDiagram" width="417" height="243"> </br>
 	
 2. Object-relational mapper: </br>
 	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/) </br>
