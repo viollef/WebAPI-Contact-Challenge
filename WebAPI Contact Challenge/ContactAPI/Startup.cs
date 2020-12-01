@@ -22,7 +22,7 @@ namespace ContactAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContactContext>(options =>
-                                              options.UseInMemoryDatabase("Default"));
+                                              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -36,6 +36,12 @@ namespace ContactAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<ContactContext>();
+                context.Database.Migrate();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
