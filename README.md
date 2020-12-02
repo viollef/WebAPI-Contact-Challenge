@@ -55,12 +55,12 @@ Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
 <!-- USAGE EXAMPLES -->
 ## Usage
 1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln</br>
-2. Launch "ContactsAPI", "IndentityServer" and "ClientTest" projects with the vs solution profile : Debug / <Multiple Startup Projects></br>
+2. Launch "ContactsAPI", "IndentityServer" and "ClientTest" projects with the vs solution profile : Debug / MultipleStartupProjects</br>
 3. Use the webapp "ClientTest" to test the API. You need to login with a test account: {user: alice, pwd: alice} or {user: bob, pwd: bob}</br>
 4. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
 *https://localhost:44386/contactsapi/contact
 *https://localhost:44386/contactsapi/skill </br>
-The JWT token required for auth is avalable on "ClientTest" project
+The JSON Web Token (JWT) required for auth is avalable on the "ClientTest" webapp project </br>
 
 <!-- OTHER INFORMATION -->
 ## Other Info
@@ -73,6 +73,11 @@ The JWT token required for auth is avalable on "ClientTest" project
 2. Object-relational mapper: </br>
 	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/) </br>
 	-LazyLoading disable, mostly managed with eager loading </br>
+
+3. Authentification </br>
+	-IdentityServer4 </br>
+	-oauth2 </br>
+	-JSON Web Token (JWT)
 
 
 <!-- IMPROVEMENT -->
