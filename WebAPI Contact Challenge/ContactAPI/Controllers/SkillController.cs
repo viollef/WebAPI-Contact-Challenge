@@ -4,10 +4,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ContactsAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ContactsAPI.Controllers
 {
     [Route("contactsapi/skill")]
+    [Authorize]
     [ApiController]
     public class SkillController : ControllerBase
     {

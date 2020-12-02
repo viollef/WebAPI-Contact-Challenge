@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 
@@ -31,6 +32,18 @@ namespace ContactAPI
             {
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
+
+            services.AddAuthentication("Bearer")
+             .AddJwtBearer("Bearer", options =>
+             {
+                 options.Authority = "https://localhost:44363";
+                 options.RequireHttpsMetadata = false;
+                 options.Audience = "contactsapi";
+                 options.TokenValidationParameters = new TokenValidationParameters
+                 {
+                     ValidateAudience = false
+                 };
+             });
 
             services.AddSwaggerGen(c =>
             {
@@ -59,6 +72,8 @@ namespace ContactAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
