@@ -29,14 +29,14 @@ namespace ContactsAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Contact>> GetContact(long id)
         {
-            var contacts = await _context.Contacts.Include(p => p.Skills).FirstOrDefaultAsync(i => i.ID == id);
+            Contact contact = await _context.Contacts.Include(p => p.Skills).FirstOrDefaultAsync(i => i.ID == id);
 
-            if (contacts == null)
+            if (contact == null)
             {
                 return NotFound();
             }
 
-            return contacts;
+            return contact;
         }
 
 
