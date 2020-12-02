@@ -84,7 +84,7 @@ The JSON Web Token (JWT) required for auth is avalable on the "ClientTest" webap
 ## Improvement to Make
 1. Add unit tests
 2. Improve API error handling
-3. Avoid contact or skill doublons (check by email for example)
+3. Avoid contact or skill duplicates (check by email for example)
 4. Add DTOs model
 
 <!-- CONTACT -->
