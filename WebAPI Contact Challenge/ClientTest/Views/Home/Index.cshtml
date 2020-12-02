@@ -6,13 +6,49 @@
     <h1 class="display-4">Welcome</h1>
 </div>
 <br />
-<p> This webapp has as to purpose to show how a logged user can interact with "Contacts API" thanks to a JWT token (using identityserver4 -> oauth2). </p>
-<p> To send a custom request to Contacts API you can use Postman with the JWT token </p>
-<br />
 <div>
+    <h4>About</h4>
+    <p> This webapp has as to purpose to show how a logged user can interact with "Contacts API" thanks to a JWT token (using identityserver4 -> oauth2). </p>
+    <p> To send a custom request to Contacts API you can use Postman with the JWT token </p>
+    <p> Default accounts -> [{username: alice, pwd: alice}, {username: bob, pwd: bob}] </p>
+    <br />
+</div>
+<div>
+    <h4>Actions</h4>
     <ul>
         <li>
-            <a asp-area="" asp-controller="Home" asp-action="JwtToken">Get JWT Token</a>
+            <a asp-area="" asp-controller="Home" asp-action="JwtToken">Get JWT token</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostContact">Generate and post a contact</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostSkill">Generate and post a skill</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GetContacts">Get contacts</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GetSkills">Get skills</a>
         </li>
     </ul>
+    <br />
+    <div>
+        <h4>Link contact and skill with put</h4>
+        <form method="get" asp-area="" asp-controller="Home" asp-action="LinkSkillToContact">
+            <div>
+                <div>
+                    <label for="contact_id">ContactId to link:</label>
+                    <input id="contact_id" name="contactId" type="number" value="1" />
+                </div>
+                <div>
+                    <label for="skill_id">SkillId to link:</label>
+                    <input id="skill_id" name="skillId" type="number" value="1" />
+                </div>
+            </div>
+            <button>
+                Link
+            </button>
+        </form>
+    </div>
 </div>

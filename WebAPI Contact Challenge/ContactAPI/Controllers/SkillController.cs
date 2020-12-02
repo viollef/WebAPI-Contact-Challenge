@@ -23,7 +23,18 @@ namespace ContactsAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Skill>>> GetSkills()
         {
-            return await _context.Skills.Include(p => p.Contacts).ToListAsync();
+            List<Skill> skills = await _context.Skills.Include(p => p.Contacts).ToListAsync();
+
+            foreach (Skill skill in skills)
+            {
+                foreach (Contact contact in skill.Contacts)
+                {
+                    contact.Skills ??= new List<Skill>();
+                    contact.Skills.Clear();
+                }
+            }
+
+            return skills;
         }
 
         [HttpGet("{id}")]
@@ -34,6 +45,12 @@ namespace ContactsAPI.Controllers
             if (skill == null)
             {
                 return NotFound();
+            }
+
+            foreach (Contact contact in skill.Contacts)
+            {
+                contact.Skills ??= new List<Skill>();
+                contact.Skills.Clear();
             }
 
             return skill;
