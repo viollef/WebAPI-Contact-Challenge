@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace ClientTest.Models
 {
     public class Contact
     {
         public long ID { get; set; }
+
+        public long CreatorUserId { get; set; }
 
         public string FirstName { get; set; }
 

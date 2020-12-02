@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ContactsAPI.Models
@@ -6,6 +7,8 @@ namespace ContactsAPI.Models
     public class Contact
     {
         public long ID { get; set; }
+
+        public long CreatorUserId { get; set; }
 
         [MaxLength(35)]
         [Required]

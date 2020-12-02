@@ -196,6 +196,52 @@ namespace ClientTest.Controllers
             return View();
         }
 
+        [Authorize]
+        public async Task<IActionResult> DeleteContact(string contactId)
+        {
+            string accessToken = await HttpContext.GetTokenAsync("access_token");
+            HttpClient client = new HttpClient();
+            client.SetBearerToken(accessToken);
+
+            HttpResponseMessage response = await client.DeleteAsync("https://localhost:44386/contactsapi/contact/" + contactId);
+            string rawResponse = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                ViewBag.Json = "Success";
+            }
+            else
+            {
+                ViewBag.Json = "Error: " + response.ReasonPhrase + ". " + rawResponse;
+            }
+            ViewBag.token = accessToken;
+
+            return View();
+        }
+
+        [Authorize]
+        public async Task<IActionResult> DeleteSkill(string skillId)
+        {
+            string accessToken = await HttpContext.GetTokenAsync("access_token");
+            HttpClient client = new HttpClient();
+            client.SetBearerToken(accessToken);
+
+            HttpResponseMessage response = await client.DeleteAsync("https://localhost:44386/contactsapi/skill/" + skillId);
+            string rawResponse = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                ViewBag.Json = "Success";
+            }
+            else
+            {
+                ViewBag.Json = "Error: " + response.ReasonPhrase + ". " + rawResponse;
+            }
+            ViewBag.token = accessToken;
+
+            return View();
+        }
+
         public async Task Logout()
         {
             await HttpContext.SignOutAsync("Cookies");

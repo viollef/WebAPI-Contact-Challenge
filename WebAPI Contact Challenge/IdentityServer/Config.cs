@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using IdentityModel;
 using IdentityServer4;
@@ -31,6 +32,7 @@ namespace AspNetCoreIdentityServer
                         IdentityServerConstants.StandardScopes.Profile,
                         "contactsapi"
                     },
+                    AccessTokenLifetime = (int)new TimeSpan(7, 0, 0, 0).TotalSeconds,
                     AllowOfflineAccess = true,
                     RequirePkce = false
                 }

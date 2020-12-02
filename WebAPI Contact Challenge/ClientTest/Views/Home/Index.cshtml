@@ -14,17 +14,15 @@
     <br />
 </div>
 <div>
-    <h4>Actions</h4>
+    <h4>JWT Token</h4>
     <ul>
         <li>
             <a asp-area="" asp-controller="Home" asp-action="JwtToken">Get JWT token</a>
         </li>
-        <li>
-            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostContact">Generate and post a contact</a>
-        </li>
-        <li>
-            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostSkill">Generate and post a skill</a>
-        </li>
+    </ul>
+    <br />
+    <h4>Get</h4>
+    <ul>
         <li>
             <a asp-area="" asp-controller="Home" asp-action="GetContacts">Get contacts</a>
         </li>
@@ -33,22 +31,72 @@
         </li>
     </ul>
     <br />
+    <h4>Generate and Post</h4>
+    <ul>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostContact">Generate and post a contact</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="GenerateAndPostSkill">Generate and post a skill</a>
+        </li>
+    </ul>
+    <br />
     <div>
-        <h4>Link contact and skill with put</h4>
-        <form method="get" asp-area="" asp-controller="Home" asp-action="LinkSkillToContact">
+        <h4>Link</h4>
+        <div>
+            <p>Link a contact and a skill using put</p>
+            <form method="get" asp-area="" asp-controller="Home" asp-action="LinkSkillToContact">
+                <div>
+                    <div>
+                        <label for="contact_id">ContactId:</label>
+                        <input id="contact_id" name="contact id" type="number" value="1" />
+                    </div>
+                    <div>
+                        <label for="skill_id">SkillId:</label>
+                        <input id="skill_id" name="skill id" type="number" value="1" />
+                    </div>
+                </div>
+                <button>
+                    Link
+                </button>
+            </form>
+            <br />
+        </div>
+        <br />
+        <div>
+            <h4>Delete</h4>
             <div>
                 <div>
-                    <label for="contact_id">ContactId to link:</label>
-                    <input id="contact_id" name="contactId" type="number" value="1" />
+                    <p>Delete a contact</p>
+                    <form method="get" asp-area="" asp-controller="Home" asp-action="DeleteContact">
+                        <div>
+                            <div>
+                                <label for="contact_id">Contact id:</label>
+                                <input id="contact_id" name="contactId" type="number" value="1" />
+                            </div>
+                        </div>
+                        <button>
+                            Delete
+                        </button>
+                    </form>
                 </div>
+                <br />
                 <div>
-                    <label for="skill_id">SkillId to link:</label>
-                    <input id="skill_id" name="skillId" type="number" value="1" />
+                    <p>Delete a skill</p>
+                    <form method="get" asp-area="" asp-controller="Home" asp-action="DeleteSkill">
+                        <div>
+                            <div>
+                                <label for="skill_id">Skill id:</label>
+                                <input id="skill_id" name="skillId" type="number" value="1" />
+                            </div>
+                        </div>
+                        <button>
+                            Delete
+                        </button>
+                    </form>
                 </div>
+                <br />
             </div>
-            <button>
-                Link
-            </button>
-        </form>
+        </div>
     </div>
 </div>
