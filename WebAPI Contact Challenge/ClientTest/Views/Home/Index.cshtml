@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<br />
+<p> This webapp has as to purpose to show how a logged user can interact with "Contacts API" thanks to a JWT token (using identityserver4 -> oauth2). </p>
+<p> To send a custom request to Contacts API you can use Postman with the JWT token </p>
+<br />
+<div>
+    <ul>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="JwtToken">Get JWT Token</a>
+        </li>
+    </ul>
+</div>

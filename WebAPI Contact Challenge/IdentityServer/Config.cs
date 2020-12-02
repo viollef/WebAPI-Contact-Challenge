@@ -14,17 +14,17 @@ namespace AspNetCoreIdentityServer
         {
             return new List<Client>
             {
-                new Client
+                 new Client
                 {
-                    ClientId = "",
-                    ClientName = "",
+                    ClientId = "clienttest",
+                    ClientName = "MVC Client",
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
                     ClientSecrets =
                     {
-                        new Secret("".Sha256())
+                        new Secret("jeSuisTresLeSecret".Sha256())
                     },
-                    RedirectUris = {  },
-                    PostLogoutRedirectUris = { },
+                    RedirectUris = { "https://localhost:44374/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44374/signout-callback-oidc" },
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
