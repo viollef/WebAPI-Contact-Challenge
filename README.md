@@ -56,7 +56,7 @@ The solution also contain an identity server and a small web application to easi
 ## Usage
 1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln</br>
 2. Launch "IndentityServer", "ContactsAPI" and "ClientTest" projects with the vs Multiple Startup Project available in the solution properties:
-<img src="Images/MultipleStartupProjects" alt="MultipleStartupProjects" width="787" height="546"> </br>
+<img src="Images/MultipleStartupProjects.jpg" alt="MultipleStartupProjects" width="787" height="546"> </br>
 3. Use the webapp "ClientTest" to test the API. You need to login with a test account: {user: alice, pwd: alice} or {user: bob, pwd: bob}</br>
 4. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
 *https://localhost:44386/contactsapi/contact
