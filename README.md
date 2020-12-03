@@ -28,7 +28,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Contacts-API is a basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill. The api support user authentication. 
+Contacts-API is a basic web API with two CRUD endpoint: contactsapi/contact and contactsapi/skill. The api support user authentication. 
 The solution also contain an identity server and a small web application to easily test the api, both was quickly designed only for testing purpose 
 
 ### Built With
@@ -55,7 +55,8 @@ The solution also contain an identity server and a small web application to easi
 <!-- USAGE EXAMPLES -->
 ## Usage
 1. Open WebAPI Contact Challenge/WebAPI Contact Challenge.sln</br>
-2. Launch "ContactsAPI", "IndentityServer" and "ClientTest" projects with the vs solution profile : Debug / MultipleStartupProjects</br>
+2. Launch "IndentityServer", "ContactsAPI" and "ClientTest" projects with the vs Multiple Startup Project available in the solution properties:
+<img src="Images/MultipleStartupProjects" alt="MultipleStartupProjects" width="787" height="546"> </br>
 3. Use the webapp "ClientTest" to test the API. You need to login with a test account: {user: alice, pwd: alice} or {user: bob, pwd: bob}</br>
 4. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
 *https://localhost:44386/contactsapi/contact
