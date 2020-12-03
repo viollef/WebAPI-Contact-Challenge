@@ -18,7 +18,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#other-info">Other information</a></li>
+    <li><a href="#other-information">Other information</a></li>
     <li><a href="#improvement">Improvement to make</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -28,10 +28,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
+Contacts-API is a basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill. The api support user authentication. 
+The solution also contain an identity server and a small web application to easily test the api, both was quickly designed only for testing purpose 
 
 ### Built With
-
 [ASP.NET Core 5.0](https://docs.microsoft.com/fr-fr/dotnet/core/dotnet-five)
 
 
@@ -60,20 +60,21 @@ Basic web API with two CRUD endpoint, contactsapi/contact and contactsapi/skill
 4. For testing for testing purposes you can use [PostMan](https://www.postman.com/) or equivalent and send web requests to the CRUD EndPoints: 
 *https://localhost:44386/contactsapi/contact
 *https://localhost:44386/contactsapi/skill </br>
-The JSON Web Token (JWT) required for auth is avalable on the "ClientTest" webapp project </br>
+The JSON Web Token (JWT) required for auth is available on the "ClientTest" webapp project </br>
 
 <!-- OTHER INFORMATION -->
-## Other Info
-1. Database: </br>
-	-The database is create with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli) by default in C:\Users\<user> </br>
-	-Migration generated with Package Manager Console: "add-migration" </br>
+## Other Information
+
+1. Object-relational mapper: </br>
+	-[EntityFramework6](https://docs.microsoft.com/fr-fr/ef/ef6/) </br>
+	-LazyLoading is disable, the data are mostly managed with eager loading </br>
+
+2. Database: </br>
+	-The database is created with EntityFramework [migrations](https://docs.microsoft.com/fr-fr/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli). By default the DB is located in C:\Users\<user> </br>
+	-The migration code is generated with the command: "add-migration" in the Package Manager Console </br>
 	-Diagram: </br>
 	<img src="Images/dbDiagram.jpg" alt="dbDiagram" width="704" height="314"> </br>
 	
-2. Object-relational mapper: </br>
-	-[EF6](https://docs.microsoft.com/fr-fr/ef/ef6/) </br>
-	-LazyLoading disable, mostly managed with eager loading </br>
-
 3. Authentification </br>
 	-IdentityServer4 </br>
 	-oauth2 </br>

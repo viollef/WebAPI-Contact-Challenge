@@ -36,6 +36,7 @@ namespace ClientTest.Controllers
             string accessToken = await HttpContext.GetTokenAsync("access_token");
 
             ViewBag.token = accessToken;
+
             return View();
         }
 
@@ -48,6 +49,7 @@ namespace ClientTest.Controllers
             HttpClient client = new HttpClient();
 
             client.SetBearerToken(accessToken);
+
             HttpResponseMessage response = await client.PostAsync("https://localhost:44386/contactsapi/contact", httpContent);
             string rawResponse = await response.Content.ReadAsStringAsync();
 
@@ -73,6 +75,7 @@ namespace ClientTest.Controllers
             HttpClient client = new HttpClient();
 
             client.SetBearerToken(accessToken);
+
             HttpResponseMessage response = await client.PostAsync("https://localhost:44386/contactsapi/skill", httpContent);
             string rawResponse = await response.Content.ReadAsStringAsync();
 
@@ -132,10 +135,12 @@ namespace ClientTest.Controllers
             contact.Skills.Add(skill);
 
             string contactSkillJson = JsonConvert.SerializeObject(contact);
+
             HttpContent httpContent = new StringContent(contactSkillJson, Encoding.UTF8, "application/json");
             HttpClient client = new HttpClient();
 
             client.SetBearerToken(accessToken);
+
             HttpResponseMessage response = await client.PutAsync("https://localhost:44386/contactsapi/contact/" + contactId, httpContent);
             string rawResponse = await response.Content.ReadAsStringAsync();
 
@@ -157,6 +162,7 @@ namespace ClientTest.Controllers
         {
             string accessToken = await HttpContext.GetTokenAsync("access_token");
             HttpClient client = new HttpClient();
+
             client.SetBearerToken(accessToken);
 
             string content = await client.GetStringAsync("https://localhost:44386/contactsapi/contact");
@@ -181,6 +187,7 @@ namespace ClientTest.Controllers
             HttpClient client = new HttpClient();
 
             client.SetBearerToken(accessToken);
+
             string content = await client.GetStringAsync("https://localhost:44386/contactsapi/skill");
 
             try
@@ -201,6 +208,7 @@ namespace ClientTest.Controllers
         {
             string accessToken = await HttpContext.GetTokenAsync("access_token");
             HttpClient client = new HttpClient();
+
             client.SetBearerToken(accessToken);
 
             HttpResponseMessage response = await client.DeleteAsync("https://localhost:44386/contactsapi/contact/" + contactId);
@@ -224,6 +232,7 @@ namespace ClientTest.Controllers
         {
             string accessToken = await HttpContext.GetTokenAsync("access_token");
             HttpClient client = new HttpClient();
+
             client.SetBearerToken(accessToken);
 
             HttpResponseMessage response = await client.DeleteAsync("https://localhost:44386/contactsapi/skill/" + skillId);
@@ -290,6 +299,7 @@ namespace ClientTest.Controllers
         {
             string accessToken = await httpContext.GetTokenAsync("access_token");
             HttpClient client = new HttpClient();
+
             client.SetBearerToken(accessToken);
 
             try
@@ -306,6 +316,7 @@ namespace ClientTest.Controllers
         {
             string accessToken = await httpContext.GetTokenAsync("access_token");
             HttpClient client = new HttpClient();
+
             client.SetBearerToken(accessToken);
 
             try

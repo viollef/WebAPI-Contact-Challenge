@@ -76,7 +76,6 @@ namespace ContactsAPI.Controllers
             {
                 return Unauthorized();
             }
-
             _context.Entry(contactInDB).CurrentValues.SetValues(contact);
 
             foreach (Skill skill in contactInDB.Skills)
@@ -172,6 +171,7 @@ namespace ContactsAPI.Controllers
                     }
                 }
             }
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetContact), new { id = contact.ID }, contact);
@@ -193,7 +193,6 @@ namespace ContactsAPI.Controllers
             {
                 return Unauthorized();
             }
-
             _context.Entry(contact).State = EntityState.Deleted;
 
             await _context.SaveChangesAsync();

@@ -167,6 +167,7 @@ namespace ContactsAPI.Controllers
                 }
             }
             _context.Entry(skill).State = EntityState.Added;
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetSkill), new { id = skill.ID }, skill);
@@ -188,8 +189,8 @@ namespace ContactsAPI.Controllers
             {
                 return Unauthorized();
             }
-
             _context.Entry(skill).State = EntityState.Deleted;
+
             await _context.SaveChangesAsync();
 
             return NoContent();
